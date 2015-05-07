@@ -1,0 +1,7 @@
+- provide :title, 'Sign in'
+.row
+  .small-12.columns
+    = simple_form_for :session, url: signin_path do |f|
+      = field_set_tag 'Login' do
+        = render partial: 'sessions/fields', object: f
+      = f.submit 'Login', class: 'small button'

@@ -1,0 +1,3 @@
+Hi, #{@user.name}
+%p
+  Please confirm your email address by clicking #{link_to('here', users_confirm_email_url(email: @user.email, hash: @user.email_hash))}.

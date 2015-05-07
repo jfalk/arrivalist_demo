@@ -1,0 +1,11 @@
+.row
+  .small-12.columns
+    = simple_form_for @company do |f|
+      = field_set_tag 'Company Info' do
+        = render partial: 'companies/fields', object: f
+
+      = f.simple_fields_for :contact_user do |user_form|
+        = field_set_tag 'Contact Info' do
+          = render partial: 'users/fields', object: user_form
+
+      = f.submit 'Next', class: 'small button'

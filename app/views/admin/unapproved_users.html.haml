@@ -1,0 +1,20 @@
+.row
+  .small-12.columns
+    %table.unapproved-list
+      %thead
+        %tr
+          %td
+            Company Name
+          %td
+            Contact Name
+          %td
+            Approve
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td
+              = user.company.name
+            %td
+              = user.name
+            %td
+              = button_to 'Approve', admin_approve_path(user), method: :put

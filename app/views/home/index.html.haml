@@ -1,0 +1,12 @@
+.row
+  .small-12.columns
+    %h2 Connected Traveler Ads
+    %p
+      Travelers are special and have unique needs.
+      The Arrivalist technology platform allows marketers to meet those needs by
+      delivering special offers to users on their mobile devices who are visiting
+      a market without spending money on ad impressions delivered to locals.
+- if (!current_user)
+  .row
+    .small-12.columns
+      = button_to 'Sign up', new_company_path, :class => 'button', :method => :get
