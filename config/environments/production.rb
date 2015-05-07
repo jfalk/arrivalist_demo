@@ -24,7 +24,7 @@ Rails.application.configure do
       :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'https://arrivalist-demo.herokuapp.com/', :port => 3000 }
+  config.action_mailer.default_url_options = { :host => 'https://arrivalist-demo.herokuapp.com'}
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
